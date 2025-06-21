@@ -138,17 +138,112 @@
         text-align: center;
       }
     }
+
+       /* HEADER STYLING */
+.site-header {
+background:#0f172a;
+  padding: 15px 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-logo a {
+color: #7cf03d;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+ 
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 10px;
+  transition: background 0.3s;
+}
+
+.main-nav ul li a:hover {
+
+ 
+  border-radius: 4px;
+}
+
+/* HIDE MENU ICON ON DESKTOP */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .main-nav.show {
+    right: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about2.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="skill.html">Service</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="site-logo">
+        <a href="index.html">Portfolio</a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about2.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skill.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
 
   <section class="contact-section">
     <h1>Contact Me</h1>
@@ -171,6 +266,20 @@
       </div>
     </div>
   </section>
-
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mainNav");
+      nav.classList.toggle("show");
+    }
+  
+    // Click outside to close menu
+    document.addEventListener("click", function(event) {
+      const nav = document.getElementById("mainNav");
+      const toggle = document.querySelector(".menu-toggle");
+      if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+        nav.classList.remove("show");
+      }
+    });
+  </script>
 </body>
 </html>
