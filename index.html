@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="x-icon" href="image.png" >
+  <title>Muzammil Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* ✅ NEW STICKY NAVBAR */
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: #0f172a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav .active {
+      color: #7cf03d;
+    }
+
+    /* Home Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 10% 40px;
+      gap: 60px;
+    }
+
+    .hero-img {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #7cf03d;
+      box-shadow: 0 0 20px #7cf03d88;
+    }
+
+    .hero-text {
+      flex: 1 1 350px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      color: #7cf03d;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #cbd5e1;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background-color: #7cf03d;
+      color: #0f172a;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: #7cf03d;
+      border: 2px solid #7cf03d;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #7cf03d;
+      font-size: 35px;
+      transition: 0.3s;
+    }
+
+   
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 8% 40px;
+      }
+
+      .hero-img img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .hero-text h2 {
+        font-size: 18px;
+      }
+
+      .hero-text p {
+        font-size: 14px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 10px;
+        font-size: 16px;
+      }
+    }
+
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Clean Sticky Navbar -->
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about2.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skill.html" >Service</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-img">
+      <img src="muz.png" alt="Muzammil">
+    </div>
+    <div class="hero-text">
+      <h1>Hi, I'm Muzammil</h1>
+      <h2>Frontend Developer | Backend Developer | Frelancer</h2>
+      <p>I create beautiful, responsive websites using HTML, CSS & JavaScript. I'm passionate about coding and helping people learn web development.</p>
+      <a class="btn" href="cv.html" download>Download CV</a>
+      <div class="socials">
+        <a href="https://wa.me/923228129383?text=Hello%20Muzammil%2C%20I%20saw%20your%20portfolio!
+        " target="_blank"><i class="fab fa-whatsapp"></i>
+        <a href="https://github.com/muzammil372" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muzammil-ahmed-25b95a330/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+
+        
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

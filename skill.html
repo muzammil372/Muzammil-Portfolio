@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | M. Muzammil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0e0e1a;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: #0e0e1a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav .active {
+      color: #00ff66;
+    }
+
+    .services-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    .services-section h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #00ff66;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #151521;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.5);
+    }
+
+    .service-card i {
+      font-size: 40px;
+      color: #00ff66;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: #00ff66;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Skills Section */
+    .skills-mini-section {
+      margin-top: 80px;
+      padding: 0 20px;
+    }
+
+    .skills-mini-section h2 {
+      text-align: center;
+      color: #00ff66;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .mini-skill {
+      margin-bottom: 25px;
+    }
+
+    .mini-skill h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .mini-bar {
+      background: #151521;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .mini-fill {
+      display: block;
+      height: 12px;
+      width: 0;
+      background: #00ff66;
+      border-radius: 5px;
+      transition: width 1.5s ease-out;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      background-color: #0e0e1a;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 768px) {
+      .service-card i {
+        font-size: 32px;
+      }
+      .services-section h1,
+      .skills-mini-section h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.mini-fill').forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width');
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about2.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="#" class="active">Service</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="services-section">
+    <h1>My Services</h1>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Back-End Development</h3>
+        <p>Clean and scalable Node.js & Express backend systems with SQL integration.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Responsive Websites</h3>
+        <p>Mobile-first responsive websites using HTML5, CSS3, and modern JS practices.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-database"></i>
+        <h3>Data Entry Apps</h3>
+        <p>Offline-ready tools with export to PDF/JPG and secure data handling.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
+        <h3>Bug Fixing</h3>
+        <p>Layout, JavaScript, or logic bugs fixed with clean explanations.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-desktop"></i>
+        <h3>Front-End Development</h3>
+        <p>Modern, pixel-perfect UI design using HTML, CSS, JavaScript with responsive layouts and animations.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Logo Design</h3>
+        <p>Creative and unique logo concepts for brands, websites or social media using Canva and other tools.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-file-alt"></i>
+        <h3>CV & Resume Designing</h3>
+        <p>Professional-looking resumes with smart formatting, clear sections, and custom styles for job interviews.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-keyboard"></i>
+        <h3>Typing & Prompt Writing</h3>
+        <p>Fast and accurate typing in English and Urdu with command on AI prompts and professional document formatting.</p>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-file-word"></i>
+        <h3>MS Word & Excel</h3>
+        <p>Skilled in document editing, tables, formatting, and data handling in Word & Excel spreadsheets.</p>
+      </div>
+      
+    </div>
+
+    <!-- Skills MINI Section -->
+    <div class="skills-mini-section">
+      <h2>My Core Skills</h2>
+
+      <div class="mini-skill">
+        <h4>HTML5</h4>
+        <div class="mini-bar"><span class="mini-fill" data-width="95%"></span></div>
+      </div>
+
+      <div class="mini-skill">
+        <h4>CSS3</h4>
+        <div class="mini-bar"><span class="mini-fill" data-width="90%"></span></div>
+      </div>
+
+      <div class="mini-skill">
+        <h4>JavaScript</h4>
+        <div class="mini-bar"><span class="mini-fill" data-width="85%"></span></div>
+      </div>
+
+      <div class="mini-skill">
+        <h4>Node.js / Express</h4>
+        <div class="mini-bar"><span class="mini-fill" data-width="80%"></span></div>
+      </div>
+
+      <div class="mini-skill">
+        <h4>MySQL / SQLite</h4>
+        <div class="mini-bar"><span class="mini-fill" data-width="75%"></span></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const skillSection = document.querySelector('.skills-mini-section');
+  
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const bars = entry.target.querySelectorAll('.mini-fill');
+  
+          if (entry.isIntersecting) {
+            // Animate fill from 0 to target
+            bars.forEach(bar => {
+              bar.style.width = '0%'; // Reset first
+              setTimeout(() => {
+                bar.style.transition = 'width 1.5s ease-out';
+                bar.style.width = bar.getAttribute('data-width');
+              }, 100); // slight delay
+            });
+          } else {
+            // Reset bars when out of view
+            bars.forEach(bar => {
+              bar.style.transition = 'none';
+              bar.style.width = '0%';
+            });
+          }
+        });
+      }, { threshold: 0.5 }); // trigger when 50% in view
+  
+      if (skillSection) observer.observe(skillSection);
+    });
+  </script>
+  
+</body>
+</html>

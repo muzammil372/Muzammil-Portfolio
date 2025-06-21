@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | M. Muzammil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0e0e1a;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: #0e0e1a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav .active {
+      color: #00ff66;
+    }
+
+    .services-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    .services-section h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #00ff66;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #151521;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.5);
+    }
+
+    .service-card i {
+      font-size: 40px;
+      color: #00ff66;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: #00ff66;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      background-color: #0e0e1a;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about2.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="#" class="active">Service</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="services-section">
+    <h1>My Services</h1>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Back-End Development</h3>
+        <p>I create clean, scalable server-side systems using Node.js, Express.js and MySQL/SQLlite. Fast & secure APIs guaranteed.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Responsive Websites</h3>
+        <p>I build beautiful responsive websites that work on mobile, tablet and desktop using HTML5, CSS3 and JavaScript.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-database"></i>
+        <h3>Data Entry Software</h3>
+        <p>I develop offline desktop apps with SQL database integration, form validation, and PDF/JPG export features.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Simple, modern interface design with smooth interactions to improve user experience and readability.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fab fa-wordpress-simple"></i>
+        <h3>WordPress Customization</h3>
+        <p>I offer theme installation, plugin setup, and customization services for WordPress websites.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
+        <h3>Bug Fixing</h3>
+        <p>Having issues with layout, code, or responsiveness? I’ll fix your bugs fast with detailed explanation.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 M. Muzammil — All Rights Reserved
+  </footer>
+
+</body>
+</html>

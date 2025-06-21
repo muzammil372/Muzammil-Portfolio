@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio | M. Muzammil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0e0e1a;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: #0e0e1a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav .active {
+      color: #00ff66;
+    }
+
+    .portfolio-section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    .portfolio-section h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #00ff66;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #151521;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 255, 102, 0.5);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin: 0;
+      color: #00ff66;
+      font-size: 22px;
+    }
+
+    .project-content p {
+      color: #ccc;
+      margin: 10px 0 15px;
+      font-size: 15px;
+    }
+
+    .project-links a {
+      color: #00ff66;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .project-links a:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      background-color: #0e0e1a;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about2.html">About</a>
+    <a href="#" class="active">Projects</a>
+    <a href="skill.html">Service</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="portfolio-section">
+    <h1>My Projects</h1>
+    <div class="project-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="newspic.png" alt="News Website Clone" />
+        <div class="project-content">
+          <h3>News Website </h3>
+          <p>Fully responsive GEO News-style website with animated login, scrollable comments, and embedded videos.</p>
+          <div class="project-links">
+            <a href="https://muzammil372.github.io/GeoNewsClone/" target="_blank"><i class="fas fa-eye"></i> Live</a>
+            <a href="https://github.com/muzammil372/JinnahTime" target="_blank"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="carpic.png" alt="Data Entry App" />
+        <div class="project-content">
+          <h3>Car Website</h3>
+          <p>Fully Responsive H Auto Cars stylish website with animated car like E-Commerse all type of cars buy and sell also
+           includ  e animated login and complete site</p>
+          <div class="project-links">
+            <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="clothingweb.png" alt="Data Entry App" />
+        <div class="project-content">
+          <h3>E-Commerse Clothing Website</h3>
+          <p>Fully ResponsiveHurain Collection stylish website with animated navbar ,text,and pictures like E-Commerse all type of cloths buy and sell also
+           only home page </p>
+          <div class="project-links">
+            <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4-->
+      <div class="project-card">
+        <img src="oldportfolio.png" alt="Old Portfolio" />
+        <div class="project-content">
+          <h3>Old Portfolio Design</h3>
+          <p>First version of my personal portfolio made with HTML, CSS & JS. Clean layout and responsive look.</p>
+          <div class="project-links">
+            <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Project 5-->
+  <div class="project-card">
+    <img src="courses.png" alt="Data Entry App" />
+    <div class="project-content">
+      <h3>IT Course Seller Web</h3>
+      <p>The Best Course Seller Website with Hover Links Workable Search-Bar that Help to Search Cources Include JoinUs Botton To Register in our Courses </p>
+      <div class="project-links">
+        <a href="#"></i> Uploaded Soon!</a>
+        <a href="#"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+       
+
+
+
+          <!-- Project 6 -->
+      <div class="project-card">
+        <img src="travell agency.png" alt="Old Portfolio" />
+        <div class="project-content">
+          <h3>Travell Agency</h3>
+          <p>This website offers travel packages, a quick registration form, exciting offers, and easy navigation through all our services and destinations.</p>
+          <div class="project-links">
+            <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+          </div>
+        </div>
+      </div>
+       <!-- Project 7-->
+       <div class="project-card">
+        <img src="youtubeclone.png" alt="Old Portfolio" />
+        <div class="project-content">
+          <h3>Youtube Clone</h3>
+          <p>This website is a YouTube-style video platform where users can watch, upload, and share videos.
+             It includes categories, search, likes, and a user-friendly interface.</p>
+          <div class="project-links">
+            <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+          </div>
+        </div>
+      </div>
+
+  <!-- Project 8 -->
+  <div class="project-card">
+    <img src="star.png" alt="Old Portfolio" />
+    <div class="project-content">
+      <h3>Star Rating Website</h3>
+      <p>This Website allow user to Rank any of website or any of thing</p>
+      <div class="project-links">
+        <a href="#"></i> Uploaded Soon!</a>
+        <a href="#"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Project 3 -->
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="calculater.png" alt="Old Portfolio" />
+      <div class="project-content">
+        <h3>calculater</h3>
+        <p>My first Project of javascript Fully Functional Calculater All Type Of Mathematical problems Solve Easly</p>
+        <div class="project-links">
+          <a href="#"></i> Uploaded Soon!</a>
+            <a href="#"></i></a>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+
+
+
+</body>
+</html>
